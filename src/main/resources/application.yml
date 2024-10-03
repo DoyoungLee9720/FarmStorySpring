@@ -97,4 +97,3 @@ spring:
                             - name
     thymeleaf:
         prefix: classpath:/templates/
-        suffix: .html

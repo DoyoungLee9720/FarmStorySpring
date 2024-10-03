@@ -23,7 +23,7 @@ public class UserFindPassResultController {
         session.setMaxInactiveInterval(60);
         String uid = (String) session.getAttribute("uid");
         if(uid == null) {
-            return "redirect:/user/UserFindPass";
+            return "redirect:user/UserFindPass";
         }
         model.addAttribute("uid", uid);
 
