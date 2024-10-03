@@ -25,7 +25,7 @@ public class MarketListController {
         }
         PageResponseDTO marketPageResponseDTO = productService.selectProductAll(pageRequestDTO, catetype);
         model.addAttribute("marketPageResponseDTO", marketPageResponseDTO);
-        return "/market/MarketList";
+        return "market/MarketList";
     }
 
 

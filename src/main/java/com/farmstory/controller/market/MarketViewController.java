@@ -37,7 +37,7 @@ public class MarketViewController {
         } else {
             model.addAttribute("userId", ""); // 비로그인 상태의 기본값
         }
-        return "/market/MarketView";
+        return "market/MarketView";
     }
 
 }

@@ -22,7 +22,7 @@ public class UserMyinfoController {
 
     UserDTO resultUser = new UserDTO();
 
-    @GetMapping("userInfo/UserMyinfo")
+    @GetMapping("/userInfo/UserMyinfo")
     public String UserMyinfo(Authentication authentication, Model model){
 
         if(authentication != null){
@@ -33,17 +33,17 @@ public class UserMyinfoController {
             resultUser = userDTO;
             return "user/UserMyinfo";
         }else{
-            return "redirect:/user/UserLogin";
+            return "redirect:user/UserLogin";
         }
 
     }
-    @GetMapping("userInfo/UserMyinfo1")
+    @GetMapping("/userInfo/UserMyinfo1")
     public String UserMyinfo1(){
         return "user/UserMyinfo1";
     }
 
     @ResponseBody
-    @PostMapping("userInfo/UserMyinfo")
+    @PostMapping("/userInfo/UserMyinfo")
     public ResponseEntity UserMyinfo(@RequestBody UserDTO userDTO) {
 
         log.info(userDTO.toString());
@@ -65,7 +65,7 @@ public class UserMyinfoController {
     }
 
     @ResponseBody
-    @PostMapping("userInfo/UserMyinfoLeave")
+    @PostMapping("/userInfo/UserMyinfoLeave")
     public ResponseEntity UserMyinfoLeave(@RequestBody String uid) {
 
         try {
@@ -81,7 +81,7 @@ public class UserMyinfoController {
     }
 
     @ResponseBody
-    @PostMapping("userInfo/LeavePass")
+    @PostMapping("/userInfo/LeavePass")
     public ResponseEntity LeavePass(@RequestBody UserDTO userDTO) {
         String pass = userDTO.getUserPass();
         String uid = userDTO.getUserUid();

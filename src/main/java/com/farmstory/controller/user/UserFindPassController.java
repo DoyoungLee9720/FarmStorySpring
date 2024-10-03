@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class UserFindPassController {
 
-    @GetMapping("user/UserFindPass")
+    @GetMapping("/user/UserFindPass")
     public String UserFindPass(){
         return "user/UserFindPass";
     }

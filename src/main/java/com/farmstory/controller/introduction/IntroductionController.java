@@ -8,6 +8,6 @@ public class IntroductionController {
 
     @GetMapping("/introduction/Introduction")
     public String introduction() {
-        return "/introduction/Introduction";
+        return "introduction/Introduction";
     }
 }

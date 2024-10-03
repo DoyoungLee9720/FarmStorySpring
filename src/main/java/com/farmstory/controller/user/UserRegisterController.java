@@ -20,12 +20,12 @@ public class UserRegisterController {
 
     private final UserService userService;
 
-    @GetMapping("user/UserRegister")
+    @GetMapping("/user/UserRegister")
     public String UserRegister(){
         return "user/UserRegister";
     }
 
-    @PostMapping("user/UserRegister")
+    @PostMapping("/user/UserRegister")
     public String UserRegister(UserDTO userDTO, HttpServletRequest req){
         String regip = req.getRemoteAddr();
         userDTO.setUserRegip(regip);
@@ -34,7 +34,7 @@ public class UserRegisterController {
     }
 
     @ResponseBody
-    @GetMapping("user/UserRegister/{type}/{value}")
+    @GetMapping("/user/UserRegister/{type}/{value}")
     public ResponseEntity<?> checkUser(HttpSession session,
                                        @PathVariable("type")  String type,
                                        @PathVariable("value") String value){
@@ -60,7 +60,7 @@ public class UserRegisterController {
 
     // 이메일 인증 코드 검사
     @ResponseBody
-    @PostMapping("user/UserRegister/email")
+    @PostMapping("/user/UserRegister/email")
     public ResponseEntity<?> checkEmail(HttpSession session, @RequestBody Map<String, String> jsonData){
 
         log.info("checkEmail code : " + jsonData);

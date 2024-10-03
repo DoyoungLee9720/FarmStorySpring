@@ -13,7 +13,7 @@ public class UserTermsController {
 
     private final TermsService termsService;
 
-    @GetMapping("user/UserTerms")
+    @GetMapping("/user/UserTerms")
     public String UserUserTerms(Model model) {
         TermsDTO terms = termsService.selectTerms();
         model.addAttribute("terms", terms);

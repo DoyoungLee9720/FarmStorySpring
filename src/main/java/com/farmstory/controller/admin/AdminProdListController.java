@@ -29,7 +29,7 @@ public class AdminProdListController {
         PageResponseDTO<ProductDTO> productDTO = productService.selectProductAll(pageRequestDTO,0);
         log.info("productDTOproductDTO"+productDTO);
         model.addAttribute("productDTOs",productDTO);
-        return "/admin/product/ProductList";
+        return "admin/product/ProductList";
     }
 
     @DeleteMapping("/admin/ProductList/Delete")

@@ -22,12 +22,12 @@ public class UserFindIdController {
 
     private final UserService userService;
 
-    @GetMapping("user/UserFindId")
+    @GetMapping("/user/UserFindId")
     public String UserFindId(){
         return "user/UserFindId";
     }
 
-    @PostMapping("user/UserFindId/{type}/{value}")
+    @PostMapping("/user/UserFindId/{type}/{value}")
     public ResponseEntity UserFindId( HttpSession session,
                                       @PathVariable("type")  String type,
                                       @PathVariable("value") String value,

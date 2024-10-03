@@ -18,7 +18,7 @@ public class UserFindPassResultController {
     private final UserService userService;
     private final PasswordEncoder passwordEncoder;
 
-    @GetMapping("user/UserFindPassResult")
+    @GetMapping("/user/UserFindPassResult")
     public String UserFindPassResult(HttpSession session, Model model) {
         session.setMaxInactiveInterval(60);
         String uid = (String) session.getAttribute("uid");
@@ -29,7 +29,7 @@ public class UserFindPassResultController {
 
         return "user/UserFindPassResult";
     }
-    @PostMapping("user/UserFindPassResult")
+    @PostMapping("/user/UserFindPassResult")
     public String UserFindPassResult(UserDTO userDTO){
 
         String uid = userDTO.getUserUid();
@@ -39,7 +39,7 @@ public class UserFindPassResultController {
         resultUser.setUserPass(userDTO.getUserPass());
         userService.updateUserPass(resultUser);
 
-        return "redirect:/user/UserLogin";
+        return "redirect:user/UserLogin";
 
 
     }
