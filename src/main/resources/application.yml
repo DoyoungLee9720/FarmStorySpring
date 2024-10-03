@@ -95,5 +95,4 @@ spring:
                         authorization-grant-type: authorization_code
                         scope:
                             - name
-    thymeleaf:
-        prefix: classpath:/templates
+
