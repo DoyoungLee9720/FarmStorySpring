@@ -28,10 +28,10 @@ public class AdminProdRegisterController {
         boolean isSuccess = productService.insertProduct(productDTO);
         if (isSuccess) {
             redirectAttributes.addFlashAttribute("message", "등록되었습니다.");
-            return "redirect:/admin/ProductRegister?success=true";
+            return "redirect:admin/ProductRegister?success=true";
         } else {
             redirectAttributes.addFlashAttribute("message", "등록에 실패하였습니다.");
-            return "redirect:/admin/ProductRegister?success=false";
+            return "redirect:admin/ProductRegister?success=false";
         }
 
     }
