@@ -8,6 +8,6 @@ public class UserFindPassController {
 
     @GetMapping("/user/UserFindPass")
     public String UserFindPass(){
-        return "user/UserFindPass";
+        return "/user/UserFindPass";
     }
 }

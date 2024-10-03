@@ -73,7 +73,7 @@ public class CropController {
         log.info("articles_controller " + articlePageResponseDTO.getDtoList());
         log.info("articles_controller " + articlePageResponseDTO);
 
-        return "crop/" + cate;
+        return "/crop/" + cate;
     }
 
 
@@ -97,7 +97,7 @@ public class CropController {
         model.addAttribute("artCate", cate);
         System.out.println("Model Map: " + model.asMap());
         System.out.println(str1);
-        return "crop/talk/CropWrite";
+        return "/crop/talk/CropWrite";
     }
 
 
@@ -136,7 +136,7 @@ public class CropController {
             fileService.insertFile(fileDTO);
         }
 
-        return "redirect:crop/" + artCate;
+        return "redirect:/crop/" + artCate;
 
     }
 
@@ -164,7 +164,7 @@ public class CropController {
         System.out.println(model);
         System.out.println(str1);
         System.out.println(cate);
-        return "crop/talk/CropView";
+        return "/crop/talk/CropView";
     }
 
     //글수정
@@ -185,7 +185,7 @@ public class CropController {
 
         model.addAttribute("str1", str1);
 
-        return "crop/talk/CropModify";
+        return "/crop/talk/CropModify";
     }
 
 
@@ -198,7 +198,7 @@ public class CropController {
         articleService.deleteArticle(no);
 
         // cate 값을 사용하여 리디렉션 경로 설정
-        return "redirect:crop/" + cate;
+        return "redirect:/crop/" + cate;
     }
 
 

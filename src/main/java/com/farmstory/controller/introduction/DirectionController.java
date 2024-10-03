@@ -8,6 +8,6 @@ public class DirectionController {
 
     @GetMapping("/introduction/IntroDirection")
     public String IntroDirection() {
-        return "introduction/IntroDirection";
+        return "/introduction/IntroDirection";
     }
 }

@@ -31,15 +31,15 @@ public class UserMyinfoController {
             model.addAttribute("user", userDTO);
 
             resultUser = userDTO;
-            return "user/UserMyinfo";
+            return "/user/UserMyinfo";
         }else{
-            return "redirect:user/UserLogin";
+            return "redirect:/user/UserLogin";
         }
 
     }
     @GetMapping("/userInfo/UserMyinfo1")
     public String UserMyinfo1(){
-        return "user/UserMyinfo1";
+        return "/user/UserMyinfo1";
     }
 
     @ResponseBody

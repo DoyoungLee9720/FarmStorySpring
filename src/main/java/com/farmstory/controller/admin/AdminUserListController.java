@@ -30,7 +30,7 @@ public class AdminUserListController {
         PageResponseDTO<UserDTO> userDto = userService.selectUserAll(pageRequestDTO);
         log.info(userDto);
         model.addAttribute("userDtos", userDto);
-        return "admin/user/UserList";
+        return "/admin/user/UserList";
     }
     @GetMapping("/admin/UserList/{userUid}")
     @ResponseBody

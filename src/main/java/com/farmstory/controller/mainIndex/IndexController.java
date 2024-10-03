@@ -57,6 +57,6 @@ public class IndexController {
         model.addAttribute("CropStory", CropStory);
         model.addAttribute("CommunityNotice", CommunityNotice);
 
-        return "index";
+        return "/index";
     }
 }

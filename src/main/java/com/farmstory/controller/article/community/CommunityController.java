@@ -49,7 +49,7 @@ public class CommunityController {
         model.addAttribute("articles", articles);
         System.out.println(articles);
 
-        return "community/" + cate;
+        return "/community/" + cate;
     }
 
     //글쓰기
@@ -73,7 +73,7 @@ public class CommunityController {
         model.addAttribute("artCate", cate);
         System.out.println("Model Map: " + model.asMap());
         System.out.println(str1);
-        return "community/talk/CommunityWrite";
+        return "/community/talk/CommunityWrite";
     }
 
     //글쓰기
@@ -106,7 +106,7 @@ public class CommunityController {
         // db제출
         model.addAttribute("str1", "b101");
 //        return "redirect:/community/CommunityNotice";
-        return "redirect:community/" + artCate;
+        return "redirect:/community/" + artCate;
     }
 
     //글보기
@@ -135,7 +135,7 @@ public class CommunityController {
 
         System.out.println(str1);
         System.out.println(cate);
-        return "community/talk/CommunityView";
+        return "/community/talk/CommunityView";
     }
 
     // 글수정
@@ -164,7 +164,7 @@ public class CommunityController {
         model.addAttribute("cate", cate);
 
         // 수정 폼으로 이동
-        return "community/talk/CommunityModify";
+        return "/community/talk/CommunityModify";
     }
 
     // 게시물 수정을 처리하는 POST 요청
@@ -193,7 +193,7 @@ public class CommunityController {
         model.addAttribute("str1", str1);
 
         // 수정 완료 후 게시글 상세 페이지로 리다이렉트
-        return "redirect:community/" + articleDTO.getArtCate() + "/CommunityView/" + articleDTO.getArtNo();
+        return "redirect:/community/" + articleDTO.getArtCate() + "/CommunityView/" + articleDTO.getArtNo();
 
 
 // 삭제기능 추가 구현 예정

@@ -37,6 +37,6 @@ public class AdminIndexController {
         log.info("productDTO"+ productDTO );
         log.info("userDto"+ userDto );
         log.info("orderDTO"+ orderDTO );
-        return "admin/AdminIndex";
+        return "/admin/AdminIndex";
     }
 }

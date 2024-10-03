@@ -28,7 +28,7 @@ public class AdminOrderListController {
         PageResponseDTO<OrderDTO> OrderPageResponseDTO = orderService.selectorderAll(pageRequestDTO);
         log.info("orderorder"+OrderPageResponseDTO);
         model.addAttribute("OrderPageResponseDTO", OrderPageResponseDTO);
-        return "admin/order/OrderList";
+        return "/admin/order/OrderList";
     }
 
     @GetMapping("/admin/OrderList/{orderNo}")

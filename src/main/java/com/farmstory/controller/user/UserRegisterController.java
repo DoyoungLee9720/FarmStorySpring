@@ -22,7 +22,7 @@ public class UserRegisterController {
 
     @GetMapping("/user/UserRegister")
     public String UserRegister(){
-        return "user/UserRegister";
+        return "/user/UserRegister";
     }
 
     @PostMapping("/user/UserRegister")

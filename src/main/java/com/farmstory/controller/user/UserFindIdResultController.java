@@ -8,6 +8,6 @@ public class UserFindIdResultController {
 
     @GetMapping("/user/UserFindIdResult")
     public String UserFindIdResult(){
-        return "user/UserFindIdResult";
+        return "/user/UserFindIdResult";
     }
 }

@@ -51,7 +51,7 @@ public class MarketOrderController {
         log.info("222222222222222"+carts);
 
         model.addAttribute("carts", carts);
-        return "market/MarketCart";
+        return "/market/MarketCart";
     }
 
     @PostMapping("/market/MarketCart")
@@ -114,7 +114,7 @@ public class MarketOrderController {
 
         model.addAttribute("carts", carts);
         model.addAttribute("user", user);
-        return "market/MarketOrder";
+        return "/market/MarketOrder";
     }
 
     @GetMapping("/market/MarketOrder")
@@ -141,7 +141,7 @@ public class MarketOrderController {
         model.addAttribute("user", user);
         model.addAttribute("carts", carts);
 
-        return "market/MarketOrder";
+        return "/market/MarketOrder";
     }
 
     @PostMapping("/market/MarketOrder")

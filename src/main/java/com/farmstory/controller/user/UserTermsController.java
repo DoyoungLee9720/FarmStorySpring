@@ -18,6 +18,6 @@ public class UserTermsController {
         TermsDTO terms = termsService.selectTerms();
         model.addAttribute("terms", terms);
 
-        return "user/UserTerms";
+        return "/user/UserTerms";
     }
 }

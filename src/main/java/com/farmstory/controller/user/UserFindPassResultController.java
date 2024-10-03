@@ -23,11 +23,11 @@ public class UserFindPassResultController {
         session.setMaxInactiveInterval(60);
         String uid = (String) session.getAttribute("uid");
         if(uid == null) {
-            return "redirect:user/UserFindPass";
+            return "redirect:/user/UserFindPass";
         }
         model.addAttribute("uid", uid);
 
-        return "user/UserFindPassResult";
+        return "/user/UserFindPassResult";
     }
     @PostMapping("/user/UserFindPassResult")
     public String UserFindPassResult(UserDTO userDTO){
@@ -39,7 +39,7 @@ public class UserFindPassResultController {
         resultUser.setUserPass(userDTO.getUserPass());
         userService.updateUserPass(resultUser);
 
-        return "redirect:user/UserLogin";
+        return "redirect:/user/UserLogin";
 
 
     }

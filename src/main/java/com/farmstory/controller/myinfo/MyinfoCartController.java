@@ -49,7 +49,7 @@ public class MyinfoCartController {
         log.info("222222222222222"+carts);
 
         model.addAttribute("carts", carts);
-        return "user/UserMyinfoCart";
+        return "/user/UserMyinfoCart";
     }
 
     @GetMapping("userInfo/UserMyinfoOrder")
@@ -60,7 +60,7 @@ public class MyinfoCartController {
 
         model.addAttribute("OrderPageResponseDTO", OrderPageResponseDTO);
 
-        return "user/UserMyinfoOrder";
+        return "/user/UserMyinfoOrder";
     }
 
     @GetMapping("/userInfo/UserMyinfoOrder/{orderNo}")

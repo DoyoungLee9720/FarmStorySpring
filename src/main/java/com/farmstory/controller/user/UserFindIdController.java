@@ -24,7 +24,7 @@ public class UserFindIdController {
 
     @GetMapping("/user/UserFindId")
     public String UserFindId(){
-        return "user/UserFindId";
+        return "/user/UserFindId";
     }
 
     @PostMapping("/user/UserFindId/{type}/{value}")
