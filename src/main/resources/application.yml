@@ -96,4 +96,4 @@ spring:
                         scope:
                             - name
     thymeleaf:
-        prefix: classpath:/templates/
+        prefix: classpath:/templates
