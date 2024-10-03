@@ -21,7 +21,7 @@ spring:
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         password: Ldy620lth106@
-        url: jdbc:mysql://localhost:3306/farmstory
+        url: jdbc:mysql://43.201.84.168:3306/farmstory
         username: root
     devtools:
         livereload:
@@ -96,4 +96,5 @@ spring:
                         scope:
                             - name
     thymeleaf:
-        prefix: classpath:/templates
+        prefix: classpath:/templates/
+        suffix: .html
