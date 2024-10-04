@@ -37,8 +37,8 @@
 						<img th:src="@{'/uploads/'+${product.prodImage1}}" th:alt="${product.prodName}"/>
 						<div class="mtxt">
 							<span th:if="${product.prodCateType}==1">과일</span>
-							<span th:if="${product.prodCateType}==2">곡류</span>
-							<span th:if="${product.prodCateType}==3">야채</span>
+							<span th:if="${product.prodCateType}==3">곡류</span>
+							<span th:if="${product.prodCateType}==2">야채</span>
 							<p></p>
 							<p class="prodname">[[${product.prodName}]]</p>
 							<p><span class="del">[[${product.prodPrice}]]</span> <span class="discount">[[${product.prodDiscount}]]%↓</span></p>
