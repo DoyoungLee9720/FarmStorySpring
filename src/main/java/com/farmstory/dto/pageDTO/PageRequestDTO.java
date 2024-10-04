@@ -1,5 +1,6 @@
 package com.farmstory.dto.pageDTO;
 
+
 import lombok.*;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -22,6 +23,7 @@ public class PageRequestDTO {
     @Builder.Default
     private int size = 5;
 
+    @Builder.Default
     private int artsize = 10;
 
     private int cateType;
