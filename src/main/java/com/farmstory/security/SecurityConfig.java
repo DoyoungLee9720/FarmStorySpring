@@ -51,13 +51,13 @@ public class SecurityConfig {
 
                 .requestMatchers("community/*/CommunityWrite/*").authenticated()
 
-                .requestMatchers("community/CommunityNotice/CommunityView/*").hasRole("ADMIN")
+                .requestMatchers("community/CommunityNotice/CommunityView/*").permitAll()
                 .requestMatchers("community/CommunityNotice/CommunityWrite").hasRole("ADMIN")
                 .requestMatchers("community/CommunityDiet/CommunityWrite").authenticated()
                 .requestMatchers("community/CommunityChef/CommunityWrite").authenticated()
                 .requestMatchers("community/CommunityCs/CommunityWrite").authenticated()
 
-                .requestMatchers("community/CommunityFaq/CommunityView/*").hasRole("ADMIN")
+                .requestMatchers("community/CommunityFaq/CommunityView/*").permitAll()
                 .requestMatchers("community/CommunityFaq/CommunityWrite").hasRole("ADMIN")
 
                 .requestMatchers("market/MarketView").permitAll()
