@@ -28,7 +28,7 @@
 		</section>
 		<section class="mainIn">
 			<div class="maintit">
-				<img th:src="@{images/main_market_tit.png}" alt="장보기 베스트 상품을 소개합니다.">
+				<a th:href="@{/market/MarketList}"><img th:src="@{images/main_market_tit.png}" alt="장보기 베스트 상품을 소개합니다."></a>
 			</div><!-- .maintit end -->
 
 			<section class="market">
@@ -63,7 +63,7 @@
 
 			<section class="crop">
 				<article class="garden">
-					<a href="#"><img th:src="@{/images/main_latest1_tit.png}" alt="텃밭가꾸기"></a>
+					<a th:href="@{/crop/CropGarden}"><img th:src="@{/images/main_latest1_tit.png}" alt="텃밭가꾸기"></a>
 					<img th:src="@{/images/main_latest1_img.jpg}" alt="텃밭가꾸기">
 					<table>
 						<tr th:each="garden,stat : ${CropGarden}" th:if="${stat.index <5}">
@@ -77,7 +77,7 @@
 					</table>
 				</article>
 				<article class="returnfarm">
-					<a href="#"><img th:src="@{/images/main_latest2_tit.png}" alt="귀농학교"></a>
+					<a th:href="@{/crop/CropReturnfarm}"><img th:src="@{/images/main_latest2_tit.png}" alt="귀농학교"></a>
 					<img th:src="@{/images/main_latest2_img.jpg}" alt="귀농학교">
 					<table>
 						<tr th:each="returnfarm,stat : ${CropReturnfarm}" th:if="${stat.index <5}">
@@ -91,7 +91,7 @@
 					</table>
 				</article>
 				<article class="croptalk">
-					<img th:src="@{/images/main_latest3_tit.png}" alt="농작물이야기">
+					<a th:href="@{/crop/CropStory}"><img th:src="@{/images/main_latest3_tit.png}" alt="농작물이야기"></a>
 					<img th:src="@{/images/main_latest3_img.jpg}" alt="농작물 이야기">
 					<table>
 						<tr th:each="story,stat : ${CropStory}" th:if="${stat.index <5}">

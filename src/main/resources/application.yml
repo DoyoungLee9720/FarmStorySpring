@@ -18,6 +18,7 @@ server:
 spring:
     application:
         name: FarmStory
+        version: ${ext.version}
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         password: Ldy620lth106@
