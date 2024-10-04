@@ -151,13 +151,28 @@ public class MarketOrderController {
 
         log.info("11111111"+ Arrays.toString(carts));
 
+        ProductDTO product = null;
+        int minusResult = 0;
 
         for(int a = 0; a < prodNos.length; a++) {
             int no = Integer.parseInt(prodNos[a]);
             int count = Integer.parseInt(prodCounts[a]);
 
-            log.info(no +""+ count);
+            product = productService.selectProduct(no);
+
+            if(product.getProdStock() < count) {
+
+                minusResult = product.getProdStock() - count;
+                break;
+
+            }
             orderService.updateProdStock(no, count);
+        }
+
+        if(minusResult < 0){
+            Map<String, Object> response = new HashMap<>();
+            response.put("stockFail", true);
+            return ResponseEntity.ok(response);
         }
 
         int a = Integer.parseInt(prodNos[0]);
@@ -180,7 +195,5 @@ public class MarketOrderController {
             response.put("failed", false);
             return ResponseEntity.ok(response);
         }
-
     }
-
 }
