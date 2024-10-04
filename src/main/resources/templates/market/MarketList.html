@@ -35,8 +35,8 @@
                 <ul class="tabs">
                     <li><a th:href="@{/market/MarketList}" class="tabs_item" >전체&#40;[[${marketPageResponseDTO.getDtoList.size()}]]&#41;</a></li>
                     <li><a th:href="@{/market/MarketList(catetype = 1)}" class="tabs_item item">과일</a></li>
-                    <li><a th:href="@{/market/MarketList(catetype = 2)}" class="tabs_item item">곡류</a></li>
-                    <li><a th:href="@{/market/MarketList(catetype = 3)}" class="tabs_item item">야채</a></li>
+                    <li><a th:href="@{/market/MarketList(catetype = 3)}" class="tabs_item item">곡류</a></li>
+                    <li><a th:href="@{/market/MarketList(catetype = 2)}" class="tabs_item item">야채</a></li>
                 </ul>
                 <table class="product_table">
                     <colgroup>
@@ -67,10 +67,10 @@
                             <th:block th:if="${product.prodCateType == 1}">
                                 과일
                             </th:block>
-                            <th:block th:if="${product.prodCateType == 2}">
+                            <th:block th:if="${product.prodCateType == 3}">
                                 곡류
                             </th:block>
-                            <th:block th:if="${product.prodCateType == 3}">
+                            <th:block th:if="${product.prodCateType == 2}">
                                 야채
                             </th:block>
                         </td>
