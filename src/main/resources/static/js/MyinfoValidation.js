@@ -23,6 +23,12 @@ let isHpOk = true;
 
 window.onload=function () {
 
+    const now = document.querySelector('.aside_bg .cate_lnb_real li:nth-child(3) a');
+    if (now) {
+        now.classList.add("now");
+    }
+
+
     const modifyForm = document.getElementsByTagName('form')[0];
 
     const btn_modify = document.querySelector('.btn_modify');
@@ -281,6 +287,8 @@ window.onload=function () {
         const leavePass = quitPass.value;
 
         if(leavePass==null || leavePass == ''){
+
+            alert('소셜 유저는 비밀번호 재설정 후 탈퇴하실 수 있습니다.')
             quitPass.style.display='block';
             quit_result.innerText = '비밀번호 입력 후 탈퇴 버튼을 눌러주세요.'
             console.log("console.log(leavePass) 1 "+leavePass)

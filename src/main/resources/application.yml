@@ -74,15 +74,15 @@ spring:
                         user-name-attribute: response
                 registration:
                     google:
-                        client-id: 60431749569-m5e000jb59uqkinlqo5udh3m54d5mlgk.apps.googleusercontent.com
-                        client-secret: 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
-                        redirect-uri: "http://ec2-52-79-243-108.ap-northeast-2.compute.amazonaws.com:8080/login/oauth2/code/google"
+                        client-id: ${GOOGLE_CLIENT_ID}
+                        client-secret: ${GOOGLE_CLIENT_SECRET}
+                        redirect-uri: "http://ec2-43-201-84-168.ap-northeast-2.compute.amazonaws.com:8080/login/oauth2/code/google"
                         scope:
                             - email
                             - profile
                     kakao:
-                        client-id: 9e3ea38368637ef1ca6a3840ecac7586
-                        client-secret: QHYal3IruswmxdUF8IKtbcYGsC5FTIxt
+                        client-id: ${KAKAO_CLIENT_ID}
+                        client-secret: ${KAKAO_CLIENT_SECRET}
                         redirect-uri: "{baseUrl}/login/oauth2/code/kakao"
                         client-name: Kakao
                         authorization-grant-type: authorization_code
@@ -90,8 +90,8 @@ spring:
                         scope:
                             - profile_nickname
                     naver:
-                        client-id: zovL1vfUnglfR69JO24v
-                        client-secret: V1DUwaQN8c
+                        client-id: ${NAVER_CLIENT_ID}
+                        client-secret: ${NAVER_CLIENT_SECRET}
                         redirect-uri: "{baseUrl}/login/oauth2/code/naver"
                         client-name: Naver
                         authorization-grant-type: authorization_code
