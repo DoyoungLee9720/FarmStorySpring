@@ -7,22 +7,22 @@
     <link rel="sssashortcut icon" href="/images/fav.ico" type="image/x-icon">
     <link rel="stylesheet" th:href="@{/css/community.css}">
     <!-- 화면당 적용할 CSS만 추가하면됨 -->
-    <!--    <script>-->
-    <!--        function increaseHitAndRedirect(artNo, redirectUrl) {-->
-    <!--            fetch('/community/increaseHit?artNo=' + artNo, {-->
-    <!--                method: 'POST',-->
-    <!--            }).then(function(response) {-->
-    <!--                if (response.ok) {-->
-    <!--                    alert("관리자 권한의 사용자만 접근가능합니다.")-->
-    <!--                    window.location.href = redirectUrl;-->
-    <!--                } else {-->
-    <!--                    console.error('Error increasing hit count');-->
-    <!--                }-->
-    <!--            }).catch(function(error) {-->
-    <!--                console.error('Error:', error);-->
-    <!--            });-->
-    <!--        }-->
-    <!--    </script>-->
+    <script>
+        function increaseHitAndRedirect(artNo, redirectUrl) {
+            fetch('/community/increaseHit?artNo=' + artNo, {
+                method: 'POST',
+            }).then(function(response) {
+                if (response.ok) {
+                    alert("관리자 권한의 사용자만 접근가능합니다.")
+                    window.location.href = redirectUrl;
+                } else {
+                    console.error('Error increasing hit count');
+                }
+            }).catch(function(error) {
+                console.error('Error:', error);
+            });
+        }
+    </script>
     <script>
         window.onload = function() {
             const now = document.querySelector('.cate_lnb li:nth-child(5) a');
@@ -93,7 +93,7 @@
 
 
     </main><!-- #main -->
-    <th:block th:include="/grid/_footer.html"/>
+<th:block th:include="/grid/_footer.html"/>
 </div><!-- warapper end -->
 </body>
 </html>

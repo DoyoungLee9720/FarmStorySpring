@@ -69,6 +69,6 @@ public class CommentService {
 
     public List<Comment> selectCommentByArtNo(int artNo){
 
-      return commentRepository.findAllByArticleArtNo(artNo);
+        return commentRepository.findAllByArticleArtNo(artNo);
     }
 }

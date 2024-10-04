@@ -44,7 +44,7 @@ public class CommentController {
 
     @GetMapping("/delete")
     public ResponseEntity<?> deleteComment(@RequestParam("articleNo") int articleNo,
-                                                @RequestParam("commentNo") int commentNo) {
+                                           @RequestParam("commentNo") int commentNo) {
         commentService.deleteComment(articleNo, commentNo);
 
         return ResponseEntity.ok().build();
@@ -57,7 +57,7 @@ public class CommentController {
         log.info(commentDTO);
         commentService.updateComment(commentDTO);
 
-       return ResponseEntity.ok().build();
+        return ResponseEntity.ok().build();
     }
 
 

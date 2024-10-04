@@ -33,7 +33,7 @@
                     </p>
                 </nav>
                 <ul class="tabs">
-                    <li><a th:href="@{/market/MarketList}" class="tabs_item" >전체&#40;[[${marketPageResponseDTO.getDtoList.size()}]]&#41;</a></li>
+                    <li><a th:href="@{/market/MarketList}" class="tabs_item" >전체&#40;[[${marketPageResponseDTO.total}]]&#41;</a></li>
                     <li><a th:href="@{/market/MarketList(catetype = 1)}" class="tabs_item item">과일</a></li>
                     <li><a th:href="@{/market/MarketList(catetype = 3)}" class="tabs_item item">곡류</a></li>
                     <li><a th:href="@{/market/MarketList(catetype = 2)}" class="tabs_item item">야채</a></li>
@@ -62,7 +62,7 @@
                         <td colspan="7" class="td_first" style="width: 100%">장바구니에 상품이 없습니다.</td>
                     </tr>
                     <tr th:each="product:${marketPageResponseDTO.getDtoList()}" th:if="${product != null}">
-                        <td class="pic"><img th:src="@{'/uploads/'+${product.prodImage1}}" alt="사과 500g"></td>
+                        <td class="pic"><a th:href="@{/market/MarketView(pNo=${product.prodNo})}"><img th:src="@{'/uploads/'+${product.prodImage1}}" alt="사과 500g" style="width: 80px; height: 80px;"></a></td>
                         <td class="type">
                             <th:block th:if="${product.prodCateType == 1}">
                                 과일

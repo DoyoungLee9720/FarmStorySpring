@@ -20,9 +20,10 @@
             }
         };
     </script>
+
     <script>
         function increaseHitAndRedirect(artNo, redirectUrl) {
-            fetch('/increaseHit?artNo=' + artNo, {
+            fetch('/crop/increaseHit?artNo=' + artNo, {
                 method: 'POST',
             }).then(function(response) {
                 if (response.ok) {
