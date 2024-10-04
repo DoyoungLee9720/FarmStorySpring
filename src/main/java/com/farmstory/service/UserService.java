@@ -186,7 +186,7 @@ public class UserService {
         session.setAttribute("code", String.valueOf(code));
 
 
-        String title = "sboard 인증코드 입니다.";
+        String title = "FarmStory 인증코드 입니다.";
         String content = "<h1>인증코드는 " + code + "입니다.</h1>";
 
         try {
