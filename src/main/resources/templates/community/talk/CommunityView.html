@@ -61,40 +61,6 @@
 			}
 		};
 
-	</script>
-	<script>
-		window.onload = function () {
-			const btnComplete = document.getElementById('btnComplete');
-			const commentForm = document.commentForm;
-			const commentList = document.getElementsByClassName('commentList')[0];
-
-			btnComplete.onclick = async function (e) {
-				e.preventDefault();
-				const jsonData = {
-					"userUid": commentForm.writer.value,
-					"artNo": commentForm.artNo.value,
-					"content": commentForm.content.value
-				};
-
-				const data = await fetchPost('/comment/write', jsonData);
-				if (data != null) {
-					window.location.reload(true);
-					alert('댓글이 등록되었습니다.');
-					const commentArticle = `
-                  <article>
-                     <span class="nick">${data.user.userUid}</span>
-                     <span class="date">${data.commentRegDate}</span>
-                     <p class="content">${data.content}</p>
-                     <div>
-                        <a href="#" class="commentRemove" data-no="${data.commentNo}">삭제</a>
-                        <a href="#" class="commentModify" data-no="${data.commentNo}">수정</a>
-                     </div>
-                  </article>`;
-					commentList.insertAdjacentHTML('beforeend', commentArticle);
-				}
-			}
-		};
-
 		let originalText = '';
 
 		function getArticleAndCommentNo(e) {
@@ -226,7 +192,7 @@
 				<tr>
 					<td>제목</td>
 					<p th:value="${#authentication.principal.user.userUid}"></p>
-
+					<input type="hidden" name="artCate" th:value="${articleDTO.artCate}">
 					<td><input type="text" name="artTitle" id="artTitle" th:value="${articleDTO.artTitle}" readonly/></td>
 				</tr>
 				<tr th:if="${articleDTO.fileList.size() > 0}">
